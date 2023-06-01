@@ -36,9 +36,10 @@
 
                     <div class="form-group">
                         <h6>Municipio</h6>
-                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                        <select name="municipio" class="form-select form-select-sm" aria-label=".form-select-sm example">
                             <option selected>Municipio</option>
-                            <option value="ahualulco">Ahualulco</option>
+                            <option  value="ahualulco" >Ahualulco</option>
+                           <!--
                             <option value="alaquines">Alaquines</option>
                             <option value="aquismon">Aquismón</option>
                             <option value="armadillo de los infante">Armadillo de los Infante</option>
@@ -95,7 +96,7 @@
                             <option value="zaragoza">Zaragoza</option>
                             <option value="villa de arista">Villa de Arista</option>
                             <option value="matlapa">Matlapa</option>
-                            <option value="el naranjo">El Naranjo</option>
+                            <option value="el naranjo">El Naranjo</option>-->
                         </select>
                     </div>
 
@@ -158,7 +159,7 @@
 
                 <div class="form-group">
                     <h6>Sexo</h6>
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <select name="sexo" class="form-select form-select-sm" aria-label=".form-select-sm example">
                         <option selected>SEXO</option>
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
@@ -169,7 +170,7 @@
 
                 <div class="form-group">
                     <h6>Estatus</h6>
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <select name="estatus" class="form-select form-select-sm" aria-label=".form-select-sm example">
                         <option selected>Estatus</option>
                         <option value="no localizado">No localizado</option>
                         <option value="localizado">Localizado</option>
@@ -181,7 +182,7 @@
 
                 <div class="form-group">
                     <h6>Delitos</h6>
-                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <select name="delito" class="form-select form-select-sm" aria-label=".form-select-sm example">
                         <option selected>Delitos</option>
                         <option value="desaparicion forzada">Desaparición forzada</option>
                         <option value="desaparicion por particulares">Desaparición por particulares</option>
