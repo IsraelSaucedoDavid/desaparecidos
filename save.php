@@ -3,6 +3,7 @@
 include("db.php");
 
 if (isset($_POST['save'])) {
+  $id_mun = $_POST['municipio'];
   $num_int = $_POST['num_int'];
   $num_cdi = $_POST['num_cdi'];
   $municipio =  $_POST['municipio'];
@@ -17,10 +18,13 @@ if (isset($_POST['save'])) {
   $estatus = $_POST['estatus'];
   $delito = $_POST['delito'];
   $fe_localizacion = $_POST['fe_localizacion'];
+  $id_mp = $_POST['mp'];
   $mp = $_POST['mp'];
 
 
 
+  /*echo $id_mun;
+  echo "<br>";
   echo $num_int;
   echo "<br>";
   echo $num_cdi;
@@ -50,17 +54,21 @@ if (isset($_POST['save'])) {
   echo $fe_localizacion;
   echo "<br>";
   echo $mp;
-  echo "<br>";
+  echo "<br>";*/
 
   //$query = "INSERT INTO desaparecido(num_int, num_cdi, municipio, colonia, fe_denuncia, de_ausencia, denunciante, victima, fe_nacimiento, edad, sexo, estatus, delito, fe_localizacion, mp) values ('$num_int', '$num_cdi', '$municipio', '$colonia', '$fe_denuncia', '$de_ausencia', '$denunciante', '$victima', '$fe_nacimiento', '$edad', '$fe_localizacion', '$mp')";
 
 
-  $query = "INSERT INTO desaparecido(num_int, num_cdi, municipio, colonia, fe_denuncia, de_ausencia, denunciante, victima, fe_nacimiento, edad, sexo, estatus, delito, fe_localizacion, mp) values ('$num_int', '$num_cdi', '$municipio', '$colonia', '$fe_denuncia', '$de_ausencia', '$denunciante', '$victima', '$fe_nacimiento', '$edad', '$sexo', '$estatus', '$delito', '$fe_localizacion', '$mp')";
+  $query = "INSERT INTO desaparecido(num_int, num_cdi, id_mun, municipio, colonia, fe_denuncia, de_ausencia, denunciante, victima, fe_nacimiento, edad, sexo, estatus, delito, fe_localizacion, id_mp, mp) values ('$num_int', '$num_cdi', '$id_mun', '$municipio', '$colonia', '$fe_denuncia', '$de_ausencia', '$denunciante', '$victima', '$fe_nacimiento', '$edad', '$sexo', '$estatus', '$delito', '$fe_localizacion', '$id_mp', '$mp')";
 
   $resultado = mysqli_query($con, $query);
-  if (!$isset) {
+  if (!$resultado) {
     die("Error");
   };
 
-  echo "saves";
+  
+
+  //$_SESSION['message'] = "Guardado con exito";
+
+  header("location: index.php");
 }
